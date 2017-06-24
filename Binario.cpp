@@ -21,6 +21,7 @@ int* Binario::getArreglo()
 	{
 		cout<<arreglo[i]<<endl;
 	}
+	cout<<endl;
 
 	return arreglo;
 
@@ -51,7 +52,7 @@ Binario* Binario::operator+(Binario* tarreglo)//disyuncion
 	int* suma=new int[4];
 	int* ar2=tarreglo->getArreglo();
 
-	for (int i = 0; i < 4; ++i)
+	for (int i = 0; i <=4; ++i)
 	{
 		if (arreglo[i]==1 && ar2[i]==1)
 		{

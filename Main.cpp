@@ -34,12 +34,13 @@ int main()
 	cin>>va2;
 
 
-	cout<<endl<<"¿Que operacion desea hacer?\n1.-crear mas varibles\n2.-disyuncion\n3.-conjuncion\n4.-implicacion\n5.-doble implicacion\n6.-disyuncion exclusiva\n7.-Salir\nque opcion";
 	while(opc!=7)
 	{
+		cout<<endl<<endl<<"¿Que operacion desea hacer?\n1.-crear mas varibles\n2.-disyuncion\n3.-conjuncion\n4.-implicacion\n5.-doble implicacion\n6.-disyuncion exclusiva\n7.-Salir\nque opcion: ";
+		cin>>opc;
+	
 		if (opc==1)
 		{
-			
 			Binario* temp =new Binario();
 			listavariables.push_back(temp);
 			cout<<endl<<"creado con exito"<<endl;
@@ -49,8 +50,15 @@ int main()
 			Binario* total=new Binario();
 
 			total=*listavariables.at(va1)+listavariables.at(va2);
+			int* array=total->getArreglo();
 			
-			cout<<"Disyuncion: "<<total->getArreglo();
+			cout<<"Disyuncion: ";
+
+
+			for (int i = 0; i < 4; ++i)
+			{
+				cout<<endl<<array[i];
+			}
 		}
 
 		if (opc==3)
@@ -59,39 +67,66 @@ int main()
 			Binario* total=new Binario();
 
 			total=*listavariables.at(va1)-listavariables.at(va2);
+			int* array;
+
+			array=total->getArreglo();
 			
-			cout<<"Conjuncion: "<<total->getArreglo();
+			cout<<"Conjuncion: ";
+			for (int i = 0; i < 4; ++i)
+			{
+				cout<<endl<<array[i];
+			}
+			cout<<endl;
 					
 		}
 		if (opc==4)
 		{
-		
+			int* array;
 			Binario* total=new Binario();
 
 			total=*listavariables.at(va1)*listavariables.at(va2);
 			
-			cout<<"Implicacion: "<<total->getArreglo();
+			array=total->getArreglo();
+			
+			cout<<"Implicacion: ";
+			for (int i = 0; i < 4; ++i)
+			{
+				cout<<endl<<array[i];
+			}
+			cout<<endl;
 					
 		}
 		if (opc==5)
 		{
-			
+			int* array;
 			Binario* total=new Binario();
 
 			total=*listavariables.at(va1)/listavariables.at(va2);
 			
-			cout<<"Doble implicacion:  "<<total->getArreglo();
-					
+			array=total->getArreglo();
+			
+			cout<<"Doble implicacion: ";
+			for (int i = 0; i < 4; ++i)
+			{
+				cout<<endl<<array[i];
+			}
+			cout<<endl;
 		}
 		if (opc==6)
 		{
-		
+			int* array;
 			Binario* total=new Binario();
 
 			total=*listavariables.at(va1)^listavariables.at(va2);
 			
-			cout<<"Disyuncion exclusiva: "<<total->getArreglo();
-					
+			array=total->getArreglo();
+			
+			cout<<"Disyuncion exclusiva: ";
+			for (int i = 0; i < 4; ++i)
+			{
+				cout<<endl<<array[i];
+			}
+			cout<<endl;
 
 			/* code */
 		}
